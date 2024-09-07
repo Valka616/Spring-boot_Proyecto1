@@ -32,6 +32,17 @@
 	</properties>
 	<dependencies>
 		<dependency>
+    		<groupId>javax.persistence</groupId>
+   			<artifactId>javax.persistence-api</artifactId>
+    		<version>2.2</version>
+		</dependency>
+		<!-- Dependencia de Spring Boot Starter Data JPA -->
+	    <dependency> <!--Nueva dependencia agregada-->
+	        <groupId>org.springframework.boot</groupId>
+	        <artifactId>spring-boot-starter-data-jpa</artifactId>
+	    </dependency>
+	
+		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
@@ -64,7 +75,43 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
-		</dependency>
+		</dependency> <!--Primer video, depdendencia agregada hasta linea 72-->
+		<dependency>
+   			 <groupId>io.springfox</groupId>
+    		 <artifactId>springfox-boot-starter</artifactId>
+    		 <version>3.0.0</version> 
+		</dependency>	
+		 <dependency>
+	        <groupId>io.springfox</groupId>
+	        <artifactId>springfox-swagger2</artifactId>
+	        <version>2.9.2</version>
+    </dependency>
+    <dependency> <!--Nuevas agregadas-->
+    <groupId>io.springfox</groupId>
+    <artifactId>springfox-swagger2</artifactId>
+    <version>2.9.2</version>
+    <exclusions>
+        <exclusion>
+            <groupId>com.google.guava</groupId>
+            <artifactId>guava</artifactId>
+        </exclusion>
+    </exclusions>
+</dependency>
+<dependency>
+    <groupId>com.google.guava</groupId>
+    <artifactId>guava</artifactId>
+    <version>27.0.1-jre</version>
+</dependency>
+
+
+    
+    <!-- Dependencia para la interfaz de usuario de Swagger -->
+    <dependency>
+        <groupId>io.springfox</groupId>
+        <artifactId>springfox-swagger-ui</artifactId>
+        <version>2.9.2</version>
+    </dependency>
+
 	</dependencies>
 	<dependencyManagement>
 		<dependencies>
